@@ -1,0 +1,5 @@
+{
+    "presets":[
+        "@babel/preset-env" //Now can run es6 on terminal 
+    ]
+}
