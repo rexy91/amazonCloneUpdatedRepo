@@ -1,0 +1,4 @@
+*{
+    /* To avoid react giving margin suddenly weird to broswer. */
+    margin:0 
+}
