@@ -13,6 +13,7 @@ const Product = ({title, price, rating, image}) =>  {
                 </p>
                 <div className='product_rating'>
                         {
+                            
                             Array(rating) // Create array with size according to the rating.
                             .fill() // Fill with empty values
                             .map(()=> (
@@ -21,7 +22,7 @@ const Product = ({title, price, rating, image}) =>  {
                         }
                 </div>
             </div>
-            
+
                 <img src={image}></img>
                 <button>Add to basket</button>
         </div>
