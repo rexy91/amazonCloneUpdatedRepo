@@ -1,3 +1,10 @@
+.landing_page{
+    /* when screen is very large, dont streach it, and center it by setting margin auto */
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .landing_image{
     width:100%;
     mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
