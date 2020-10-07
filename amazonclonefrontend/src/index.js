@@ -7,11 +7,15 @@ import 'react-mdl/extra/material.css';
 import 'react-mdl/extra/material.js';
 
 import {BrowserRouter as Router} from 'react-router-dom'
+import {StateProvider} from './Components/StateProvider'
+import reducer, {initialState} from './Components/reducer'
 
 ReactDOM.render(
+<StateProvider initialState={initialState} reducer={reducer} >
   <Router>
     <App />
-    </Router>,
+    </Router>
+</StateProvider>,
   document.getElementById('root')
 );
 

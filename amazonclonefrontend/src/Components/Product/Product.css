@@ -1,6 +1,7 @@
 .product_card {
     display: flex;
     flex-direction: column;
+    /* text-align: center; */
     align-items: center;
     justify-content: flex-end;
     /* for responsive  */
@@ -14,7 +15,6 @@
 
 .product_rating{
     display: flex;
-    
 }
 
 /* direct child  */

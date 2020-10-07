@@ -3,8 +3,14 @@ import {Link} from 'react-router-dom'
 import SearchIcon from '@material-ui/icons/Search'
 import ShoppingBasketIcon from '@material-ui/icons/ShoppingBasket'
 import './Narbar.css'
+import {useStateValue} from '../StateProvider'
 
 function Narbar() {
+
+// initial state has {basket: []} inside reducer.js 
+    const [state, dispatch] = useStateValue();
+    console.log(state) 
+    
     return (
         <nav className='header'>
             <Link>
@@ -43,7 +49,7 @@ function Narbar() {
                 <Link to='/checkout' className='header_link'>
                     <div className='header_optionCheckout'>
                             <ShoppingBasketIcon />
-                            <span className='header_optionLine2 header_itemsCount' >0</span>
+                            <span className='header_optionLine2 header_itemsCount' >{state?.basket?.length}</span>
                     </div>
                 </Link>
         </div>

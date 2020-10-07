@@ -1,8 +1,25 @@
 import React from 'react'
 import './Product.css'
+import {useStateValue} from '../StateProvider'
 
+const Product = ({id,title, price, rating, image}) =>  {
+    // dont need the first argument, we are only dispatching. 
+    const [state, dispatch] = useStateValue();
 
-const Product = ({title, price, rating, image}) =>  {
+    const addToBasket = () => {
+        dispatch({
+            type:'ADD_TO_BASKET',
+            // item is the payload
+            // Dispatching the current product's info to the store.
+            item:{
+                id,
+                title,
+                price,
+                rating,
+                image
+            }
+        })
+    }
     return (
         <div className ='product_card'>
             <div className='product_information'>
@@ -24,7 +41,7 @@ const Product = ({title, price, rating, image}) =>  {
             </div>
 
                 <img src={image}></img>
-                <button>Add to basket</button>
+                <button onClick={addToBasket}>Add to basket</button>
         </div>
     )
 }
