@@ -7,12 +7,14 @@ export const initialState={
     // Reducer takes in initalstate and action 
 
 function reducer(state, action) {
+
     switch(action.type) {
         case 'ADD_TO_BASKET':
+            console.log(state)
             // Add item to basket array:
             return {
                 ...state, // this will give bakset and user
-                basket:[action.item] //Now add item to the basket array. 
+                basket:[...state.basket, action.item] //Now add item to the basket array. 
             }
         case 'REMOVE_FROM_BASKET':
         // Here is logic for removing from basket

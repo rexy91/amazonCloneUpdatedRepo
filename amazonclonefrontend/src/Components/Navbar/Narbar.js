@@ -9,7 +9,6 @@ function Narbar() {
 
 // initial state has {basket: []} inside reducer.js 
     const [state, dispatch] = useStateValue();
-    console.log(state) 
     
     return (
         <nav className='header'>
